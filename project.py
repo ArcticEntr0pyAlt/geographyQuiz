@@ -5,12 +5,12 @@ import random
 
 QUESTIONS_FILE = 'questions.json'
 LEADERBOARD_FILE = 'leaderboard.json'
-MAX_QUESTIONS = 5
+MAX_QUESTIONS = 15
 MAX_ATTEMPTS = 5
 POINTS_PER_CORRECT = 20
 
 # Project: Geography Quiz Game
-# Description: A simple quiz game that tests players' knowledge of geography. Players will be given facts about a country and must guess which country it is. The game keeps track of scores and automatically creates a leaderboard json file if such doesnt already exit (do not make a file yourself or shit will break. let the code make one for you.)
+# Description: A simple quiz game that tests players' knowledge of geography and specific countries. Players will be given facts about a country and must guess which country it is. The game keeps track of scores and automatically creates a leaderboard json file if such doesnt already exit (do not make a file yourself or it will break. let the code make one for you.)
 # Can this dev code? Absolutely not.
 
 def load_questions():
@@ -96,7 +96,7 @@ def run_game_once():
 # what the fuck
 
 def main():
-    easygui.msgbox('Welcome to the Geography Quiz! You have 5 attempts and 5 questions per game.')
+    easygui.msgbox('Welcome to the Geography Quiz! You have 5 attempts and 15 questions per game.')
 
     while True:
         score = run_game_once()
@@ -115,7 +115,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# i hate everything about this project why did I chose coding for my digital technology assessment
-# I COULD HAVE DONE VIDEO EDITING OR PHOTOSHOP IM SO FUCKING STUPID
-# if it was working with cybersecurity like metasploit or nmap or whater I would have been fine but ah well we ballin
