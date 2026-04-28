@@ -5,13 +5,13 @@ import random
 
 QUESTIONS_FILE = 'questions.json'
 LEADERBOARD_FILE = 'leaderboard.json'
-MAX_QUESTIONS = 15
+MAX_QUESTIONS = 20
 MAX_ATTEMPTS = 5
-POINTS_PER_CORRECT = 20
+POINTS_PER_CORRECT = 10
 
 # Project: Geography Quiz Game
 # Description: A simple quiz game that tests players' knowledge of geography and specific countries. Players will be given facts about a country and must guess which country it is. The game keeps track of scores and automatically creates a leaderboard json file if such doesnt already exit (do not make a file yourself or it will break. let the code make one for you.)
-# Can this dev code? Absolutely not.
+# Can this dev code? Absolutely not, but we ball.
 
 def load_questions():
     if not os.path.exists(QUESTIONS_FILE):
