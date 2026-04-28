@@ -96,7 +96,7 @@ def run_game_once():
 # what the fuck
 
 def main():
-    easygui.msgbox('Welcome to the Geography Quiz! You have 5 attempts and 15 questions per game.')
+    easygui.msgbox('Welcome to the Geography Quiz! You have 5 attempts and 20 questions per game.')
 
     while True:
         score = run_game_once()
