@@ -38,6 +38,7 @@ def record_score(name, score):
     entries.append({'name': name, 'score': score})
     entries.sort(key=lambda e: e['score'], reverse=True)
     save_leaderboard(entries)
+    # this function records a player's score in the leaderboard.json file
 
 
 def show_leaderboard():
@@ -47,6 +48,7 @@ def show_leaderboard():
         return
     lines = '\n'.join(f"{idx + 1}. {e['name']} - {e['score']}" for idx, e in enumerate(entries[:10]))
     easygui.msgbox('----- LEADERBOARD -----\n' + lines)
+    # Shows the leaderboard at the end of the game if the leaderboard.json file exists and has data in it
 
 
 def player_info_for_leaderboard(score):
@@ -54,6 +56,7 @@ def player_info_for_leaderboard(score):
     if name is None or not name.strip():
         return 'Anonymous', score
     return name.strip(), score
+# Asks for your name to add to the leaderboard. If a name is not given, you will be named "Anonymous"
 
 
 def run_game_once():
@@ -93,7 +96,7 @@ def run_game_once():
 
     easygui.msgbox(f'Game over! Your final score is: {score}')
     return score
-# what the fuck
+# Main game function
 
 def main():
     easygui.msgbox('Welcome to the Geography Quiz! You have 5 attempts and 20 questions per game.')
