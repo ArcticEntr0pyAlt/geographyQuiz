@@ -13,7 +13,6 @@ POINTS_PER_CORRECT = 10
 
 # Project: Geography Quiz Game, utilising the EasyGUI library.
 # Description: A simple quiz game that tests players' knowledge of geography and specific countries. Players will be given facts about a country and must guess which country it is. The game keeps track of scores and automatically creates a leaderboard json file if such doesnt already exit (do not make a file yourself or it will break. let the code make one for you.)
-# Can this dev code? Absolutely not, but we ball.
 
 def load_questions():
     if not os.path.exists(QUESTIONS_FILE):
@@ -61,7 +60,7 @@ def player_info_for_leaderboard(score):
     if name is None or not name.strip():
         return 'Anonymous', score
     return name.strip(), score
-# Asks for your name to add to the leaderboard. If a name is not given, you will be named "Anonymous".
+# Asks for your name to add to the leaderboard. If a name is not given, you will be named "Anonymous."
 
 
 def run_game_once():
@@ -128,3 +127,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# yah this is the project hope u enjoy
