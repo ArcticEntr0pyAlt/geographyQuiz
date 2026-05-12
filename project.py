@@ -101,6 +101,7 @@ def run_game_once():
     easygui.msgbox(f'Game over! Your final score is: {score}')
     return score
 # Main game function that adds score based on correct answer and deducts your remaining attempts if you get a question wrong.
+# You will not lose score if you get a question wrong
 # It also grabs the 20 random questions from questions.json.
 
 def main():
