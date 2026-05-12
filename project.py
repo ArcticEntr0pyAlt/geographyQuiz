@@ -22,7 +22,6 @@ def load_questions():
         return json.load(f)
     # Checks if the questions file exists and loads it
 
-
 def load_leaderboard():
     if not os.path.exists(LEADERBOARD_FILE):
         return []
@@ -30,7 +29,6 @@ def load_leaderboard():
         return json.load(f)
     # checks if the leaderboard file exists and loads it.
     # if the file does not exist, one will be created at the end of a game once a name is provided.
-
 
 def save_leaderboard(entries):
     with open(LEADERBOARD_FILE, 'w', encoding='utf-8') as f:
@@ -44,7 +42,6 @@ def record_score(name, score):
     save_leaderboard(entries)
     # this function records a player's score in the leaderboard.json file.
 
-
 def show_leaderboard():
     entries = load_leaderboard()
     if not entries:
@@ -54,14 +51,12 @@ def show_leaderboard():
     easygui.msgbox('----- LEADERBOARD -----\n' + lines)
     # Shows the leaderboard at the end of the game if the leaderboard.json file exists and has data in it.
 
-
 def player_info_for_leaderboard(score):
     name = easygui.enterbox(f'Congratulations! Your final score is: {score}\nPlease enter your name for the leaderboard:')
     if name is None or not name.strip():
         return 'Anonymous', score
     return name.strip(), score
 # Asks for your name to add to the leaderboard. If a name is not given, you will be named "Anonymous."
-
 
 def run_game_once():
     questions = load_questions()
@@ -124,7 +119,6 @@ def main():
     # there's also the end screen that asks if you wanna play again or not.
     # and it appends the name you give for your score (if one is not provided, it will default to anonymous), and your score, to the leaderboard.json file.
     # Scores and names are displayed at the end of the game if there are scores that exist.
-
 
 if __name__ == '__main__':
     main()
